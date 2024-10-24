@@ -1,0 +1,281 @@
+75% of storage used … If you run out, you can't create, edit and upload files. Get 100 GB of storage for ₹130.00 ₹0 for 1 month.
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content=" This website is created as a group project a website for the department of IT PCE by BTECH 3rd sem student">
+        <meta name="author" content="Track the Tutor">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="filter.css">
+        <!-- <link rel="stylesheet" href="feedback.html">
+        <link rel="stylesheet" href="feedback.css"> -->
+       
+    
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/9/96/Poornima_College_logo.png" type="image/x-icon">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title> PCE || IT department</title>
+    </head>
+
+    <!-- show feedback  -->
+    
+
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                <a href="#" class="nav__logo">PCE-IT Department</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About </a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Attendance</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Faculties</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Feedback</a></li>
+                        <li class="nav__item">  <a href="./Admin/head-admin.html" class="button">Admin</a></li>
+                    </ul>
+                </div> 
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>  
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Welcome to Poornima College of Engineering <br>The Department of <br> <span class="home__title-color">Information Technology</span><br> </h1>
+
+                    <a href="mailto:it.info@poornima.org" class="button">Contact</a>
+                    <a href="https://www.poornima.org/contact-us" class="home__social-icon"><i class='bx bxl-chrome'></i></a>
+                </div>
+            </section>
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                      <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/user/276/e2b764928098107.60702d660944f.png" alt="Please HOld-ON with us"></a>
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">IT Department ||| PCE </h2>
+                        <p class="about__text">Poornima College of Engineering, also known as PCE, Jaipur is a private institution established in 2000 and is affiliated with Rajasthan Technical University. The institute is a part of the Poornima Group of Colleges (PGC) and is accredited by NBA. The student forum of PCE, namely the PCE IETE Student Forum is recognised as the most active ISF by IETE Rajasthan Center. Poornima College of Engineering is an 'Autonomous' institution, approved by the RTU, AICTE, and the UGC.Poornima College of Engineering was established in 2000 with the aim of imparting pragmatic technical education. In its magnificent journey of 22 years, PCE has set benchmarks and reached new pinnacles in engineering education with dedication, perseverance and devotion. PCE is spearheading its outstanding voyage with the motto ‘Success is not a destination, it’s a journey’. Poornima College of Engineering, Jaipur has been consistently ranked 2nd in QIV Ranking of Rajasthan Technical University, Kota, from the last five academic years. The QIV Ranking is based primarily upon Academics, University results, Placements & Alumni.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+           
+                 <!-- Faculty Filter -->
+                <!-- <div class="sidebar" id="filterSidebar">
+                    <div class="sidebar-header">
+                        <h2>Filter by:</h2>
+                        <button id="closeFilter" class="close-btn">&times;</button> 
+                    </div>
+                    
+                    Faculty Filter
+                    <div class="filter-section">
+                        <label for="facultyFilter">Faculty:</label>
+                        <select id="facultyFilter">
+                            <option value="">Select Faculty</option>
+                            <option value="Dr. Rekha Nair">Dr. Rekha Nair</option>
+                            <option value="Dr. Siddharth">Dr. Siddharth</option>
+                            <option value="Mr. Bhagirath Chauhan">Mr. Bhagirath Chauhan</option>
+                            <option value="Mr. Dhananjay Kumar">Mr. Dhananjay Kumar</option>
+                            <option value="Dr. Peeyush Vats">Dr. Peeyush Vats</option>
+                        </select>
+                    </div>
+                    
+                    Subject Filter
+                    <div class="filter-section">
+                        <label for="subjectFilter">Subject:</label>
+                        <select id="subjectFilter">
+                            <option value="">Select Subject</option>
+                            <option value="Data Structures">Data Structures</option>
+                            <option value="Computer Networks">Computer Networks</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        </select>
+                    </div>
+                    
+                    <button id="applyFilter" onclick="applyFilter()">Apply Filter</button>
+                </div>
+                 
+                Faculty Display Section
+                <div class="faculty-list">
+                    <div class="faculty" data-faculty="Dr. Rekha Nair" data-subject="Data Structures">
+                        <h3>Dr. Rekha Nair</h3>
+                        <p>Subject: Data Structures</p>
+                    </div>
+                    <div class="faculty" data-faculty="Dr. Siddharth" data-subject="Computer Networks">
+                        <h3>Dr. Siddharth</h3>
+                        <p>Subject: Computer Networks</p>
+                    </div>
+                    <div class="faculty" data-faculty="Mr. Bhagirath Chauhan" data-subject="Software Engineering">
+                        <h3>Mr. Bhagirath Chauhan</h3>
+                        <p>Subject: Software Engineering</p>
+                    </div>
+                    <div class="faculty" data-faculty="Mr. Dhananjay Kumar" data-subject="Artificial Intelligence">
+                        <h3>Mr. Dhananjay Kumar</h3>
+                        <p>Subject: Artificial Intelligence</p>
+                    </div>
+                </div> -->
+                 
+
+            <!-- ===== SKILLS ===== -->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Attendance</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Attendance for BTECH-IT</h2>
+                        <p class="skills__text">Hey, Teachers login to the system and make the attendance record digitally.</p>
+                        <div class="skills__data">
+                           <div class="skills__names" >
+                                <i class='bx bxl-html5 skills__icon'></i>
+                             <a href="./BCA/login-teachers.html">  <span class="skills__name">BTECH Semesters- 1, 2, 3, 4, 5, 6, 7, 8</span></a>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name"><a href="./search.html">View Attendance</span></a>
+                            </div> 
+                        </div>
+                     </div>
+                      <div>              
+                        <img src="https://as1.ftcdn.net/v2/jpg/03/22/27/72/1000_F_322277247_e49nQCriD1Vd4u6Gp8pDsMGn4djCf5a9.jpg" class="skills__img"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== WORK ===== -->
+                    <section class="work section" id="work">
+                <h2 class="section-title">Faculties</h2>
+
+                <div class="work__container bd-grid">
+
+                    <a href="https://pcecollege.co.in/teacher_detail.php?id=12" class="work__img">
+                        <img src="https://www.poornima.org/uploads/team/1721400624.jpg">
+                        <h2>Dr.Rekha Nair</h2><p> DEAN FIRST YEAR DEPARTMENT</p>
+                        <br>
+                    </a>
+                    
+                    <a href="https://pcecollege.co.in/teacher_detail.php?id=10" class="work__img">
+                        <img src="https://www.poornima.org/uploads/team/1721400990.jpeg">
+                        <h2>Dr.Siddharth</h2><p>Associate Professor</p>
+                        <br>
+                    </a>
+
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=25" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1721412570.jpeg">
+                <h2>Mr.Bhagirath Chauhan</h2><p>Assistant Professor</p>
+                <br>
+            </a>
+
+           
+
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=25" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1721890324.jpeg">
+                <h2> Mr. Dhananjay Kumar</h2><p> Assistant Professor</p>
+                <br>
+            </a>
+
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=25" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1721400789.jpg">
+                <h2> Dr.Peeyush Vats</h2><p> Professor</p>
+                <br>
+            </a>
+
+
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=25" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1716899274.jpg">
+                <h2> Dr.Ghanshyam Singh</h2><p> Assistant Professor</p>
+                <br>
+            </a>
+
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=25" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1721394160.jpg">
+                <h2>Mr.Pradeep Kumar</h2><p>Assistant Professor</p>
+                <br>
+            </a>
+
+            </a>
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=25" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1716898422.jpg">
+                <h2>Ms.Shazia Haque</h2><p>Associate Professor</p>
+                <br>
+            </a>
+
+            <a href="https://pcecollege.co.in/teacher_detail.php?id=14" class="work__img">
+                <img src="https://www.poornima.org/uploads/team/1716886806.jpg">
+                <h2>Dr.Gajendra S. Rajawat</h2><p>Head Of Department</p>
+                <br>
+            </a>
+         
+        </div>
+
+    </section>
+
+
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Feedback</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="https://formsubmit.co/04c01a56a7ac19b80148d1cf7b355cb9" method="POST" class="contact__form">
+                    <label>
+                      Your Name:
+                      <input type="text" name= "Name" placeholder="Name" class="contact__input">
+                    </label>
+                    <label>
+                      Your Email:
+                      <input type="mail" name= "Email" placeholder="Email" class="contact__input">
+                    </label>
+                    <label>
+                        Your Message
+                        <textarea name="Ask any Question" id="" cols="0" rows="10" class="contact__input"></textarea>
+                      </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit" class="contact__button button">Send</button>
+                  </form>
+                </div>
+            </section>
+              
+              
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Developed by B-TECH III</p>
+            <div class="footer__social">
+           
+                <p class="footer__copy"> <a href="https://github.com/track of tutors">TRACK THE TUTOR</a>  
+                
+            </div>
+
+            <p class="footer__copy">&#169; <a href="#">PCE-IT Department</a> All rights reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+        
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script src="Admin/main2.js"></script>
+        <script src="auth.js"></script>
+        <script src="feedback.js"></script>
+        <script src="filter.js"></script>
+    </body>
+</html>
+<!--added code-->
